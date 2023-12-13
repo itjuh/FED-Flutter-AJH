@@ -1,0 +1,17 @@
+플러터 2일차!
+
+1. 플러터 설치 명령어 학습
+2. 변수.dart
+
+dart언어 교육
+- 선언
+[ 타입추론형 ] var dynamic
+[ 숫자형 ] int double num
+[ 문자형 ] String
+[ 불린형 ] bool
+[ 콜렉션 ] List Set Map
+- 출력
+print($변수)
+- 캐스팅(형변환)
+일반형변환 int.parse(변수)
+메서드체인방식 변수.toString()
