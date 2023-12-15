@@ -1,5 +1,5 @@
 void main(List<String> args) {
-
+  // 변수 : 값을 저장하는 메모리 공간!
   /**
    * 다트언어는 변수형을 자동으로 인식하는 선언이 있음
    * 1. var : 자동 형 선택 variable 
