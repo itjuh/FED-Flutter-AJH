@@ -37,6 +37,19 @@ void main(List<String> args){
    * 2. 널병합 연산자 : ?? ( 널 처리 )
    * 
    */
+  /**
+   * [ 익명함수 ]
+   * -> 다른 함수에 실행코드를 전달 할 경우 주로 사용 됨
+   * 형식 : (){코드}
+   * 예) 전달하는 함수 ->>> 함수명((){코드}) 
+   * 함수호출 ->>> 데이터형 함수(함수형 함수명)  : void 함수(Function ff){ff();}
+   */
+  /**
+   * [ 람다함수 ]
+   * -> 함수형 변수로 선언 후 화살표로 자동 리턴또는 실행코드 작성
+   * 형식: Function <Stiring> = (전달변수)=>코드;
+   * ->> 리턴없이도 자동리턴
+   */
   showTxt('반갑습니다.');
   showTxt('이순신에 대해 알아볼까요?');
   showTxt('이순신의 마지막 전투는? ${leeFight[2]}${detail[leeFight[2]]}');
@@ -45,7 +58,55 @@ void main(List<String> args){
   showTxt(showSub(2));
   // 이순신 시리즈 영화의 주요 출연자 찍기
   showTxt('이순신 시리즈 영화의 주요 출연배우들:${actorList(actors.toList())}');
+  // 다음 추가 이순신 시리즈가 있다면 어느 배우를 추천하는가
+  showTxt('다음 이순신 시리즈의 추천배우는? 공유다');
+  showTxt('공유의 취미는 ${recommActor['공유']?['취미']}다. 출생지는 ${recommActor['공유']?['자동차']??'정보가 없'}다.');
+
+  // 익명함수를 만들어서 특정 함수의 값으로 전달한다
+  japanShip((){print('개/박/살..!! 일본 배 침몰');});
+
+  // 람다함수 연습
+  showTxt('"아직 신에게는 ${shipNum}척의 배가 남아 있습니다" 이 대사가 나오는 이순신의 전투는?${leeFight[0]}');
+  showTxt('"아직 신에게는 ${minus()}척의 배가 남아 있습니다";');
+  showTxt('"아직 신에게는 ${minus()}척의 배가 남아 있습니다";');
+  showTxt('"아직 신에게는 ${minus()}척의 배가 남아 있습니다";');
+  showTxt('"아직 신에게는 ${minus()}척의 배가 남아 있습니다";');
+  showTxt('"아직 신에게는 ${minus()}척의 배가 남아 있습니다";😥');
+
+  showTxt('이순신의 부하 중 이순신이 있었다. 그는 전투저넹 너무 긴장되어서 구구단을 외웠다, 9단');
+  gogo(9);
+  gugu(8);
 } // main ////
+int ini = 0, init = 0;
+//재귀호출 함수
+void gugu(int val){
+  print('${val} * ${++ini} = ${init+=val}');
+  if(ini > 8) return;
+  gugu(val);
+}
+
+Function gogo = (int seq) => {
+  for(int i =1; i < 10; i ++){
+  print('${seq} * ${i} = ${seq*i}')
+  }
+};
+
+int shipNum = 13;
+// 람다식으로 숫자를 줄이는 함수
+Function minus = ()=> --shipNum;
+
+void japanShip(Function bomb){
+  print('나는 일본 배! 각오들 해!');
+  bomb();
+} /////// japanShip 함수 ///////
+
+// 추천배우 변수
+const recommActor = {
+  '조인성':{'나이':42,'취미':'비행','출생지':'명일동'},
+  '강동원':{'나이':42,'취미':'건축','출생지':'부산광역시'},
+  '공유':{'나이':45,'취미':'비내리기','출생지':'공유하우스'},
+};
+
 // [ 다트의 상수표현 ] : 전역변수화 하기
 final List<String> leeFight = ['명량','한산','노량'];
 // final leeFight = ['명량','한산','노량']; // 이것도 허용
