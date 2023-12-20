@@ -1,0 +1,25 @@
+[ 오늘의 일정 : 12월 20일(수) ]
+------------------------------
+1. 플러터 학습
+   - 다트문법 기본편 : 클래스2
+
+다트의 클래스
+class 클래스명 {
+  final String 속성1;
+  final int 속성2;
+  클래스명(this.속성1, this.속성2); <=생성자함수 꼭 실행
+  final 리턴값 메서드명(){}
+}
+다트의 클래스 상속
+class 부모클래스 {
+  final String 속성1;
+  final int 속성2;
+  클래스명(this.속성1, this.속성2); <=생성자함수 꼭 실행
+  final 리턴값 메서드명(){}
+}
+class 자식클래스 extends 부모 {
+  final String 속성3;
+  final int 속성4;
+  클래스명(this.속성3, this.속성4) : super(속성값, 속성값);
+  void 메서드명(){}
+}
