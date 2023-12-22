@@ -20,3 +20,6 @@
 - flutter pub get (전체설치)
 - flutter pub add 패키지명 (일부설치)
 -> pubspec.yaml 에 기록 됨
+
+7. 플러터 프로젝트 띄우기
+- code. 프로젝트 생성하고 바로이동
