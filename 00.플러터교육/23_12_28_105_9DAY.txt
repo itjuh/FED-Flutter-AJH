@@ -1,0 +1,44 @@
+플러터는 하나하나가 캡슐화 되어있음
+
+구조는 child:Column(children:[child:Row(children:[Text('text',style: textStyle()),spacer()])])
+
+key : value
+value is method
+Column(children:List)
+
+child:method(children:[child:method()])
+
+child 유일요소
+children: [] 리스트 요소 넣기
+
+
+레시피 앱
+
+1. analysis_options.yaml
+rules 넣기
+// const 관련 설정 추천 false
+prefer_const_literals_to_create_immutables: const 키워드를 강제화 하는 옵션입니다.
+prefer_typing_uninitialized_variables: 타입을 지정하지 않아도 되는 옵션입니다. var 로 통일할 수 있습니다.
+prefer_const_constructors: 클래스 생성시 const 키워드를 강제화 하는 옵션입니다.
+prefer const constructors in immutables: const 키워드를 강제화 하는 옵션입니다.
+avoid_print: 프린트 함수 제거를 강제화 하는 옵션입니다.
+
+2. pubspec.yaml
+assets 경로 설정
+  assets:
+    - assets/images/
+
+font 경로 설정
+fonts:
+    - family: Schyler
+      fonts:
+        - asset: fonts/Schyler-Regular.ttf
+
+//최외각 디자인 위젯
+MaterialApp(
+
+)
+//가장 바깥쪽 레이아웃 위젯
+Scaffold(
+    
+)

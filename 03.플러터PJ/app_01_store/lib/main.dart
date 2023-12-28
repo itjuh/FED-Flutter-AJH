@@ -25,6 +25,7 @@ class StorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //
     return Scaffold(
       body: SafeArea(
         // 앱기본 방향 시작은 세로방향 Column에서 시작
@@ -37,6 +38,8 @@ class StorePage extends StatelessWidget {
             padding: EdgeInsets.all(4방향전체),
             padding: EdgeInsets.only(left/top/right/bottom특정방향만),
             padding: EdgeInsets.symmetric(수직/수평중),
+            [ center 위젯 ]
+            center로 싸주면 컨텐츠가 중앙정렬 됨
            */
             // Row - 가로방향 위젯요소
             Padding(
@@ -47,44 +50,59 @@ class StorePage extends StatelessWidget {
                     'Woman',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         color: Colors.orangeAccent),
                   ),
                   Icon(
                     Icons.woman,
                     color: Colors.orangeAccent,
+                    size: 20.0,
                   ),
                   Spacer(),
                   Text(
                     'Kids',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         color: Colors.blueAccent),
                   ),
                   Icon(
                     Icons.child_care,
                     // Icons.child_friendly,
                     color: Colors.blueAccent,
+                    size: 20.0,
                   ),
                   Spacer(),
+                  // 로고이미지
+                  Image.asset(
+                    'logo.png',
+                    width: 65.0,
+                  ),
                   Text(
                     'Shoes',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         color: Color.fromARGB(255, 209, 46, 46)),
                   ),
-                  Icon(Icons.shop_2, color: Color.fromARGB(255, 209, 46, 46)),
+                  Icon(
+                    Icons.shop_2,
+                    color: Color.fromARGB(255, 209, 46, 46),
+                    size: 20.0,
+                  ),
                   Spacer(),
                   Text(
                     'Bag',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
+                        fontSize: 15.0,
                         color: Colors.deepPurpleAccent),
                   ),
-                  Icon(Icons.shopping_bag, color: Colors.deepPurpleAccent),
+                  Icon(
+                    Icons.shopping_bag,
+                    color: Colors.deepPurpleAccent,
+                    size: 20.0,
+                  ),
                 ],
               ),
             ),
@@ -94,7 +112,9 @@ class StorePage extends StatelessWidget {
             Expanded(
               child: Image.asset('bag.jpeg', fit: BoxFit.cover),
             ),
-            SizedBox(height:5.0,),
+            SizedBox(
+              height: 5.0,
+            ),
             Expanded(
               child: Image.asset('cloth.jpeg', fit: BoxFit.cover),
             ),
