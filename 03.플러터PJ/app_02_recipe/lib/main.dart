@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   // MaterialApp 위젯을 사용하여 디자인
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp( // 안드로이드 디자인 포멧
       // hide debug Mode
       debugShowCheckedModeBanner: false,
       // 앱 전체에 적용하는 속성값들 세팅
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
          * fontFamily 속성은 하나의 폰트 적용
          * fontFamilyFallback : [] 는 여러개의 리스트 적용
          */
-        fontFamilyFallback: ['Diphylleia','PatuaOne'],
+        fontFamilyFallback: ['PatuaOne','Diphylleia',],
       ),
       home: RecipePageHome(),
     );

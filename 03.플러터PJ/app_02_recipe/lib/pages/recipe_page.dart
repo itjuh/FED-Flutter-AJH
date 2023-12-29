@@ -22,17 +22,28 @@ class RecipePageHome extends StatelessWidget {
     // 가장 바깥쪽 레이아웃 위젯
     return Scaffold(
       // 1. 전체 배경색 설정하기
-      backgroundColor: Colors.amber.shade900,
+      backgroundColor: Colors.white,
       // 2. appbar class 호출하기
       appBar: _buildRecipeAppBar(),
       // 3. body 구현하기
-      body: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(30.0),
-            child: RecipeTitle(),
-          ),
-        ],
+      body: Padding(
+        // 상하/좌우 대칭 여백 패딩설정(symmetric : 대칭적인)
+        // vertical:0.0, horizontal:0.0
+        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        // Column 위젯은 스크롤표시 안됨
+        // ListView 위젯은 스크롤바 가능
+        child: ListView(
+          children: [
+            // 1. 레시피 페이지 전체 타이틀
+            RecipeTitle(),
+            // 2. 레시피 페이지 메뉴
+            RecipeMenu(),
+            // 3. 레시피 이미지
+            RecipeListItem('coffee','커피 레시피'),
+            RecipeListItem('burger','수제버거 레시피'),
+            RecipeListItem('pizza','피자 레시피'),
+          ],
+        ),
       )
       // body: Padding(
       //   padding: EdgeInsets.all(30.0),
@@ -48,7 +59,7 @@ class RecipePageHome extends StatelessWidget {
 AppBar _buildRecipeAppBar() {
   return AppBar(
     // 앱바 배경색
-    backgroundColor: Color.fromARGB(255, 255, 236, 219),
+    backgroundColor: Color.fromARGB(255, 209, 209, 209),
     // elevation 속성 : 앱바그림자 효과 조정속성 double형 : 높이(바닥에서부터 높이감)
     elevation: 1.0,
     // actions 속성 : 앱바 컨텐츠 파트[리스트형]
