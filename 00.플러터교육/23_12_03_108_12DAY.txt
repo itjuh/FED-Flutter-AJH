@@ -1,0 +1,14 @@
+[ 오늘의 일정 : 1월 3일(수) ]
+------------------------------
+1. 플러터 학습 :
+   (1) app_03_profile(프로파일앱)
+      - 비상태 위젯 만들기
+      - 상태(Stateful) 위젯 만들기(탭메뉴)
+
+
+클래스나 필드명을 _(언더바)로 시작할 경우 private 으로 설정된다고 한다.
+
+drawer
+endDrawer: ProfileDrawer(),
+mainAxisAlignment: MainAxisAlignment.spaceEvenly
+crossAxisAlignment: CrossAxisAlignment.start
