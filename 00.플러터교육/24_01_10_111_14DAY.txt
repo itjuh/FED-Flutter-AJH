@@ -29,3 +29,8 @@ initialRoute: '/login',
 Navigator.pushNamed(context,'/라우터주소')
 
 SVG로고를 넣기 위해서 설치해줘야함
+
+자료구조~
+스택형(Stack) -> 플링글스 (last in first out)
+큐형(Queue) -> 배수관 (first in first out)
+리스트형(List) -> 원하는 순서를 뺄 수 있음
