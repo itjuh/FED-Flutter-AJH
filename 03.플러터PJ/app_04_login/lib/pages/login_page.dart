@@ -7,8 +7,12 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.green.shade300,
+      // 리스트 뷰를 써야만 스크롤이 생성되어 
+      // 하단 입력 키보드 생성 시 가리지 않음
+      body: ListView(
+        children: [
+          // 로고 보이기
+        ],
       ),
     );
   }

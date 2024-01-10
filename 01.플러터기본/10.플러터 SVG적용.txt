@@ -1,0 +1,15 @@
+[ 로고 SVG ]
+
+1. SVG를 출력하려면 추가 위젯을 설치해야함
+
+2. pub.dev 공식 위젯사이트 'flutter_svg'검색
+
+3. Installing 탭에서 검색 명령어 확인
+
+4. 명령어를 터미널에 입력
+- flutter pub add flutter_svg
+
+5. 설치 확인은 pubspec.yaml 에서 아래와 같이 확인 됨
+
+dependencies:
+flutter_svg: ^2.0.9
