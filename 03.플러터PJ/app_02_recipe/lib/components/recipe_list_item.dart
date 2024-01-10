@@ -26,7 +26,7 @@ class RecipeListItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(20.0),
             // 1. 이미지 :parameter- imageName 사용
             child: Image.asset(
-              'images/$imageName.jpeg',
+              'assets/images/$imageName.jpeg',
               // 이미지 확장 채우기
               fit: BoxFit.cover,
             ),
