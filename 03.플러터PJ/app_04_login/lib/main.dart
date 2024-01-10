@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
               borderRadius: BorderRadius.circular(30.0),
             ),
             // 버튼 최소크기 설정
-            minimumSize: Size(400, 60),
+            minimumSize: Size(300, 60),
           ),
         ),
       ),
