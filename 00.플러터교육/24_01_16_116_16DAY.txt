@@ -1,0 +1,8 @@
+cart_app만들기
+0. app폴더 생성 / assets 저장 / yaml파일 세팅
+1. theme적용
+2. statefulWidget 제작
+3. stack위젯
+큐 처럼 fifo 구조로 되어있음
+Container 위젯 Positioned 위젯을 쓰면 positioned는 absolute와 비슷함
+4. CupertinoDialog
